@@ -1,0 +1,140 @@
+/* Reset and center everything */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* The main container - widened to 700px for side-by-side layout */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 700px; 
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Grouping the input and button */
+.input-group {
+    display: flex;
+    flex-direction: row; /* Put input and button on the same line */
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1; /* Input takes up remaining space */
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #FFCC00; 
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #3B4CCA; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover { background-color: #2a3b96; }
+button:active { transform: scale(0.98); }
+
+/* NEW: Flexbox layout for side-by-side */
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Left Side (Image) */
+.sprite-container {
+    flex: 1; /* Takes up 50% of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokemonSprite {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    image-rendering: pixelated; 
+}
+
+/* Right Side (Stats) */
+.stats-container {
+    flex: 1; /* Takes up 50% of the space */
+    text-align: left;
+}
+
+#displayName {
+    text-align: left;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 28px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+}
+
+.stat-label { font-weight: bold; color: #555; }
+.capitalize { text-transform: capitalize; }
+
+/* Grid for HP, Attack, Defense */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    padding: 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hp { background-color: #FF5959; }
+.attack { background-color: #F5AC78; }
+.defense { background-color: #FAE078; color: #333; }
+
+.stat-name { font-size: 12px; text-transform: uppercase; letter-spacing: 1px;}
+.stat-number { font-size: 20px; }

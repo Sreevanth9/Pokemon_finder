@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h1>Poké Search</h1>
+        
+        <div class="input-group">
+            <input type="text" id="pokemonName" placeholder="Enter name (e.g., charizard)">
+            <button onclick="fetchData()">Search</button>
+        </div>
+
+        <!-- NEW: Wrapper for side-by-side layout -->
+        <div id="contentWrapper" class="content-wrapper" style="display: none;">
+            
+            <!-- Left Side: Image -->
+            <div class="sprite-container">
+                <img id="pokemonSprite" src="" alt="Pokemon Sprite">
+            </div>
+
+            <!-- Right Side: Stats -->
+            <div id="statsContainer" class="stats-container">
+                <h2 id="displayName"></h2>
+                
+                <div class="stat-row">
+                    <span class="stat-label">Type:</span>
+                    <span id="pokemonType" class="stat-value capitalize"></span>
+                </div>
+                
+                <div class="stat-row">
+                    <span class="stat-label">Weight:</span>
+                    <span id="pokemonWeight" class="stat-value"></span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box hp">
+                        <span class="stat-name">HP</span>
+                        <span id="pokemonHp" class="stat-number"></span>
+                    </div>
+                    <div class="stat-box attack">
+                        <span class="stat-name">ATK</span>
+                        <span id="pokemonAttack" class="stat-number"></span>
+                    </div>
+                    <div class="stat-box defense">
+                        <span class="stat-name">DEF</span>
+                        <span id="pokemonDefense" class="stat-number"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End of Wrapper -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
