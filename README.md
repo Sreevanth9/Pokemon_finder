@@ -1,6 +1,6 @@
 # ⚡ Poké Search
 
-A sleek, responsive web application that allows users to search for any Pokémon and instantly view their official artwork, typing, weight, and base stats. 
+A sleek, responsive web application that allows users to search for any Pokémon and instantly view their official artwork, type, weight, and base stats. 
 
 ## 🛠️ Built With
 * **HTML5:** Semantic structure.
